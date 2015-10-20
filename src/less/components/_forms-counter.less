@@ -8,10 +8,12 @@
 //   <label for="character-counter-sample" class="control-label">Label</label>
 //   <div class="y-counter">
 //     <input type="text" max-character="35" id="character-counter-sample" class="form-control input-lg">
-//     <span class="y-counter-number">30</span>
+//     <span class="y-counter-number {$modifiers}">30</span>
 //   </div>
-//   <p class="help-block">Maximum text lenght is 30 characters</p>    
+//   <p class="help-block">Maximum text length is 30 characters</p>    
 // </div>
+//
+// .y-counter-error - Append this class when the limit is reached
 //
 // Styleguide 10.5
 
@@ -19,6 +21,7 @@
 @y-counter-padding-vertical: 5px;
 @y-counter-base-width: 35px;
 @y-counter-color: @default-blue;
+@y-counter-error-color: @default-red;
 
 .y-counter{
   position: relative;
@@ -30,7 +33,13 @@
     right: 0;
     padding: @padding-base-vertical @padding-base-horizontal;
     color: @y-counter-color;
+
   }
+
+  &-error{
+    color: @y-counter-error-color;
+  }
+
   input,
   textarea{
 
