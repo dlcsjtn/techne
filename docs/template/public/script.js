@@ -43,7 +43,7 @@ $( document ).ready(function(){
         var state = parseInt($('#content').css('left'),10) > 200;
 
         $('#left-nav').animate({'left':(state ? -220: 0)}, 'fast');
-        $('#content').animate({'left': (state ? 0 : 220)}, 'fast');
+        $('#content').animate({'margin-left': (state ? 0 : 220)}, 'fast');
         $('.top-nav').animate({'margin-left': (state ? 0 : 220)}, 'fast');
 
     });
