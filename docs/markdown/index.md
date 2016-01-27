@@ -1,8 +1,4 @@
-<!--SIDENAVCONFIG
-{
-        "leftNavMobileOnly": true
-}
--->
+
 
 <div class="hyHomePage">
     <header class="main-header hyHomeHeaderMain">
