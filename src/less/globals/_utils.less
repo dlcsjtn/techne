@@ -101,3 +101,23 @@
   float:none;
   display: inline-block;
 }
+
+
+
+// Generic table-layout to avoid linebreaks
+
+.y-table-layout,
+.y-table{
+  // Double Classes need to be resolved after GA! 
+  width: 100%;
+  display: table;
+}
+.y-table-cell{
+  display: table-cell;
+  vertical-align: top;
+
+  &.y-table--min-width{
+    // This will expand to the min width of the content
+    width: 1px;
+  }
+}
