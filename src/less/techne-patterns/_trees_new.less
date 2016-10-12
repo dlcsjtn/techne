@@ -63,8 +63,8 @@
 //                 <span  class="inactive ng-binding ">Inactive</span>
 //             </span>
 //             <div class="dropdown pull-right">
-//                 <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
-//                     <span class="hyicon-more"></span></a>
+//                 <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span></a>
 //                     <ul class="dropdown-menu pull-right text-left" role="menu">
 //                         <li><a href="#" >Edit Category Details</a></li>
 //                         <li><a href="#">Add Child Category</a></li>
@@ -79,7 +79,7 @@
 //         </div>
 //         <div class="subcategories-cnt ">
 //             <div class=" clearfix subcategories-list" style="clear:both;">
-//                 <div class="categoryRow  hasNoChildCategories" >
+//                 <div class="categoryRow onFocusRow" >
 //                 <div class="mobileLayout clearfix visible-xs ">
 //                 <div class="col-xs-2">
 //                     <a class="btn btn-link category-toggle ">
@@ -126,8 +126,8 @@
 //                             <span class="default">Default</span>
 //                         </span>
 //                         <div class="dropdown pull-right">
-//                             <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
-//                                 <span class="hyicon-more"></span></a>
+//                             <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                                 <span class="hyicon hyicon-more"></span></a>
 //                                 <ul class="dropdown-menu pull-right text-left" role="menu">
 //                                     <li><a href="#" >Edit Category Details</a></li>
 //                                     <li><a href="#">Add Child Category</a></li>
@@ -140,7 +140,7 @@
 //                     <div class="subcategories-cnt ">
 //                         <div class=" clearfix subcategories-list" style="clear:both;"></div>
 //                         </div></div>
-//                         <div class="categoryRow  hasNoChildCategories" >
+//                         <div class="categoryRow onFocusRow lastOnFocusRow" >
 //                         <div class="mobileLayout clearfix visible-xs ">
 //                         <div class="col-xs-2">
 //                             <a class="btn btn-link category-toggle ">
@@ -167,26 +167,28 @@
 //                             </div>
 //                         </div>
 //                         <div class="desktopLayout clearfix visible-sm visible-md visible-lg ">
-//                             <div class="col-sm-1">
-//                                 <a class="btn btn-link category-toggle ">
-//                                     <span class="glyphicon glyphicon-chevron-down glyphicon-empty" >
-//                                     </span>
-//                                 </a>
-//                             </div>
-//                             <div class="col-sm-3">
-//                                 <p class="primaryData">
-//                                     <span class="categoryName ng-binding">&ltPrimary Value&gt</span>
-//                                 </p>
-//                             </div>
+//                            <div class="col-sm-4">
+//                              <div class="col-sm-1 col-sm-offset-1 ">
+//                                  <a class="btn btn-link category-toggle ">
+//                                      <span class="glyphicon glyphicon-chevron-down">
+//                                      </span>
+//                                  </a>
+//                              </div>
+//                              <div class="col-sm-9 ">
+//                                  <p class="primaryData">
+//                                      <span class="categoryName">&ltPrimary Value&gt</span>
+//                                  </p>
+//                              </div>
+//                             </div> 
 //                             <div class="col-sm-3 " >Secondary Value</div>
 //                             <div class="col-sm-3 " >Secondary Value</div>
 //                             <div class="col-sm-2">
 //                                 <span class="statusDataValue">
-//                                     <span ng-if="!category.published" class="inactive ng-binding ">Inactive</span>
+//                                     <span class="default">Default</span>
 //                                 </span>
 //                                 <div class="dropdown pull-right">
-//                                     <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
-//                                         <span class="hyicon-more"></span></a>
+//                                     <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                                         <span class="hyicon hyicon-more"></span></a>
 //                                         <ul class="dropdown-menu pull-right text-left" role="menu">
 //                                             <li><a href="#">Edit Category Details</a></li>
 //                                             <li><a href="#">Add Child Category</a></li>
@@ -200,25 +202,177 @@
 //                        </div>
 //                    </div>
 //                  </div>
-//                </div> 
+//     <div class="mobileLayout clearfix visible-xs ">
+//     <div class="col-xs-2">
+//         <a class="btn btn-link category-toggle ">
+//             <span class="glyphicon glyphicon-chevron-down"></span>
+//         </a>
+//     </div>
+//     <div class="col-xs-7">
+//         <p class="primaryData" ><span class="categoryName">&ltPrimary Value&gt</span></p>
+//         <p class="secondaryData " >Secondary Value</p>
+//         <p class="secondaryData " >Secondary Value</p>
+//         <p class="statusDataValue">
+//             <span class="inactive ">Inactive</span>
+//         </p>
+//     </div>
+//     <div class="col-xs-3">
+//         <div class="dropdown pull-right">
+//             <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
+//                 <span class="hyicon hyicon-more"></span></a>
+//                 <ul class="dropdown-menu pull-right text-left" role="menu">
+//                     <li><a href="#" >Edit Category Details</a></li>
+//                     <li><a href="#">Add Child Category</a></li>
+//                     <li class="divider"></li>
+//                     <li><a >Delete Category</a></li>
+//                 </ul>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="desktopLayout clearfix visible-sm visible-md visible-lg ">
+//         <div class="col-sm-4">
+//             <div class="col-sm-1 ">
+//               <a class="btn btn-link category-toggle ">
+//                   <span class="glyphicon glyphicon-chevron-down">
+//                   </span>
+//               </a>
+//            </div>
+//            <div class="col-sm-10 ">
+//              <p class="primaryData">
+//                 <span class="categoryName">&ltPrimary Value&gt</span>
+//              </p>
+//            </div>
+//         </div>   
+//         <div class="col-sm-3 " >Secondary Value</div>
+//         <div class="col-sm-3 " >Secondary Value</div>
+//         <div class="col-sm-2">
+//             <span class="statusDataValue">
+//                 <span ng-if="!category.published" class="inactive ng-binding">Inactive</span>
+//             </span>
+//             <div class="dropdown pull-right">
+//                 <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span></a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#" >Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <!-- <li class="divider"></li>
+//                         <li><a href >Add Category Above</a></li>
+//                         <li><a href >Add Category Below</a></li> -->
+//                         <li class="divider"></li>
+//                         <li><a >Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//     <div class="mobileLayout clearfix visible-xs ">
+//     <div class="col-xs-2">
+//         <a class="btn btn-link category-toggle ">
+//             <span class="glyphicon glyphicon-chevron-down"></span>
+//         </a>
+//     </div>
+//     <div class="col-xs-7">
+//         <p class="primaryData" ><span class="categoryName">&ltPrimary Value&gt</span></p>
+//         <p class="secondaryData " >Secondary Value</p>
+//         <p class="secondaryData " >Secondary Value</p>
+//         <p class="statusDataValue">
+//             <span class="inactive ">Inactive</span>
+//         </p>
+//     </div>
+//     <div class="col-xs-3">
+//         <div class="dropdown pull-right">
+//             <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
+//                 <span class="hyicon-more"></span></a>
+//                 <ul class="dropdown-menu pull-right text-left" role="menu">
+//                     <li><a href="#" >Edit Category Details</a></li>
+//                     <li><a href="#">Add Child Category</a></li>
+//                     <li class="divider"></li>
+//                     <li><a >Delete Category</a></li>
+//                 </ul>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="desktopLayout clearfix visible-sm visible-md visible-lg ">
+//         <div class="col-sm-4">
+//             <div class="col-sm-1 ">
+//               <a class="btn btn-link category-toggle ">
+//                   <span class="glyphicon glyphicon-chevron-down">
+//                   </span>
+//               </a>
+//            </div>
+//            <div class="col-sm-10 ">
+//              <p class="primaryData">
+//                 <span class="categoryName">&ltPrimary Value&gt</span>
+//              </p>
+//            </div>
+//         </div>   
+//         <div class="col-sm-3 " >Secondary Value</div>
+//         <div class="col-sm-3 " >Secondary Value</div>
+//         <div class="col-sm-2">
+//             <span class="statusDataValue">
+//                 <span  class="inactive ng-binding ">Inactive</span>
+//             </span>
+//             <div class="dropdown pull-right">
+//                 <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span></a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#" >Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <!-- <li class="divider"></li>
+//                         <li><a href >Add Category Above</a></li>
+//                         <li><a href >Add Category Below</a></li> -->
+//                         <li class="divider"></li>
+//                         <li><a >Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//     </div> 
 //
 // Pattern 15
 
-.treeTable{
+.treeTable {
     //border: 1px solid @body-bg;
      background-color: @body-bg;
+     color: @tablerow-text-color;
     
-    .desktopLayout{
+    .desktopLayout {
         border-bottom: 1px solid @body-bg;
+        padding: 20px 15px 10px 15px;
     }
     
     .tablehead {
         background-color: @body-bg;
         font-size: 14px;
         color: @tablehead-text-color;
-        font-weight:500;    //TODO: double check if it is 500 or 600
+        font-weight: 500;    //TODO: double check if it is 500 or 600, put it in a variable
         padding: 25px 15px;
         text-transform: uppercase;
+    }
+
+    .primaryData {
+        font-weight: 500;
+        color: @tablerow-text-color;
+    }
+
+    .categoryRow {
+        border-bottom: none;
+    }
+
+    .onFocusRow { 
+        .desktopLayout, .mobileLayout {
+            background-color: @white;
+        }
+        .primaryData {
+            color: @primarydata-on-focus-text-color;
+        }
+    }
+
+    .lastOnFocusRow {
+        margin-bottom: 12px;
+    }
+
+    .category-toggle, .dropdown-toggle {
+        padding: 0;
     }
 }
 
