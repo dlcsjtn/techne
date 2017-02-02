@@ -4,26 +4,12 @@
 //
 // Markup:
 // <div class="feedback-menu">
-//  <span class="hyicon hyicon-feedback button-icon" title="Feedback"></span>
-//  <span class="hyicon hyicon-gethelp button-icon" title="Help"></span>
+//      <div class="help-button">
+//          <span class="hyicon hyicon-gethelp button-icon" data-toggle="tooltip" data-placement="left"> </span>
+//      </div>
+//      <div class-"feedback-button" data-toggle="tooltip" data-placement="left">
+//          <span class="hyicon hyicon-feedback button-icon"></span>
+//      </div>
 // </div>
 //
 // Component 5.5
-
-.feedback-menu {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-
-  & .button-icon {
-    margin-top: 15px;
-
-    &:first-child {
-      margin-top: 0;
-    }
-    
-  }
-
-}

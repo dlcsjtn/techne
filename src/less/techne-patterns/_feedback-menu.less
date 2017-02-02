@@ -1,0 +1,191 @@
+// Markup:
+// <div class="feedback-menu">
+//     <a class="feedback-button" data-toggle="modal" data-target="#feedbackModal">
+//         <span class="hyicon hyicon-gethelp button-icon" 
+//               data-toggle="tooltip" 
+//               data-placement="left" 
+//               title="Help"></span>
+//     </a>
+//     <a class="help-button" data-toggle="modal" data-target="#getHelpModal">
+//         <span class="hyicon hyicon-feedback button-icon" 
+//               data-toggle="tooltip" 
+//               data-placement="left" 
+//               title="Feedback"></span>
+//     </a>
+// </div>
+// <div id="feedbackModal" class="modal fade" role="dialog">
+//     <div class="modal-dialog">
+//         <div class="modal-content">
+//             <div class="modal-header text-center">
+//                 <button type="button" class="close" data-dismiss="modal">
+//                     <span class="hyicon hyicon-close"></span>
+//                     <span class="sr-only">Close</span>
+//                 </button>
+//                 <h2>Submit Feedback to SAP Hybris</h2>
+//                 <h4>Tell us how we can improve</h4>
+//             </div>
+//             <div class="modal-body">
+//                 <div class="form-group">
+//                     <label for="email">Email</label>
+//                     <input type="text" class="form-control input-lg" id="email" placeholder="Optional">
+//                     <span class="help-inline">
+//                         <span class="hyicon hyicon-helpoff help-icon-inline"></span>
+//                         <span class="help-block-inline">
+//                             Your email address is used only if we 
+//                             need to contact you for more details.
+//                         </span>
+//                     </span>
+//                 </div>
+//                 <div class="form-group">
+//                     <label for="subject">Subject</label>
+//                     <select name="" id="issueType" class="form-control input-lg">
+//                         <option value="Improvement" selected>Improvement</option>
+//                         <option value="New Feature">New Feature</option>
+//                         <option value="Bug">Bug</option>
+//                     </select>
+//                 </div>
+//                 <div class="form-group feedbackform-textarea">
+//                     <label class="desc" for="suggestions">
+//                         Suggestions / Improvements <span class="req">*</span> 
+//                     </label>
+//                     <textarea id="suggestions" class="textarea form-control" 
+//                     spellcheck="true" rows="3" cols="50" tabindex="1" required=""></textarea>
+//                 </div>
+//                 <p class="text-muted">Other ways to provide feedback:</p>
+//                 <h3>Talk to Experts</h3>
+//                 <p>
+//                     Use <a href="https://experts.hybris.com/spaces/151/index.html" target="_blank">
+//                             <strong>hybris Experts Forum</strong>
+//                         </a> to get help from y-Experts</p>
+//             </div>
+//             <div class="modal-footer">
+//                 <button data-dismiss="modal" tabindex="5" 
+//                 class="btTxt btn btn-lg btn-subordinate">CANCEL</button>
+//                 <button id="saveForm" tabindex="6" class="btTxt submit btn btn-lg btn-primary">
+//                     SUBMIT FEEDBACK
+//                 </button>
+//             </div>
+//             <div id="complete"></div>
+//         </div>
+//     </div>
+// </div>
+// <div id="getHelpModal" class="modal fade" role="dialog">
+//     <div class="modal-dialog">
+//         <div class="modal-content">
+//             <div class="modal-header text-center">
+//                 <button type="button" class="close" data-dismiss="modal">
+//                     <span class="hyicon hyicon-close"></span>
+//                     <span class="sr-only">Close</span>
+//                 </button>
+//                 <h2>Get Help</h2>
+//             </div>
+//             <div class="modal-body">
+//                 <div class="form-group">
+//                     <label for="email">Email</label>
+//                     <input type="text" class="form-control input-lg" id="email" placeholder="Optional">
+//                     <span class="help-inline">
+//                         <span class="hyicon hyicon-helpoff help-icon-inline"></span>
+//                         <span class="help-block-inline">
+//                             We use your email to send you updates about your help request
+//                         </span>
+//                     </span>
+//                 </div>
+//                 <div class="form-group feedbackform-textarea">
+//                     <label class="desc" for="suggestions">Details <span class="req">*</span> </label>
+//                     <textarea id="suggestions" class="textarea form-control" spellcheck="true" 
+//                     rows="3" cols="50" tabindex="1" required=""></textarea>
+//                     <span class="help-inline">
+//                         <span class="hyicon hyicon-helpoff help-icon-inline"></span>
+//                         <span class="help-block-inline">
+//                             Provide all of the details, including the context of the issue and the project name
+//                         </span>
+//                     </span>
+//                 </div>
+//             </div>
+//             <div class="modal-footer">
+//                 <button data-dismiss="modal" tabindex="5" class="btTxt btn btn-lg btn-subordinate">CANCEL</button>
+//                 <button id="saveForm" tabindex="6" class="btTxt submit btn btn-lg btn-primary">GET HELP</button>
+//             </div>
+//             <div id="complete"></div>
+//         </div>
+//     </div>
+// </div>
+//
+// Pattern 12.1
+
+// Feedback menu with Back to Top
+//
+// Back to Top button can also be incorporated with the feedback menu
+//
+// Markup:
+// <div class="feedback-menu">
+//     <a class="feedback-button">
+//         <span class="hyicon hyicon-gethelp button-icon" 
+//               data-toggle="tooltip" 
+//               data-placement="left" 
+//               title="Help"></span>
+//     </a>
+//     <a class="help-button">
+//         <span class="hyicon hyicon-feedback button-icon" 
+//               data-toggle="tooltip" 
+//               data-placement="left" 
+//               title="Feedback"></span>
+//     </a>
+//     <a class="back-to-top-button">
+//         <span class="hyicon hyicon-top button-icon" 
+//               data-toggle="tooltip" 
+//               data-placement="left" 
+//               title="Back to top"></span>
+//     </a>
+// </div>
+//
+// Pattern 12.2
+
+.feedback-menu {
+    position: relative;
+    font-size: 35px;
+
+    >a{
+        display: inline-block;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .feedback-button{
+        position: absolute;
+        top: 0px;
+        height: 40px;
+    }
+
+    .help-button{
+        position: absolute;
+        top:50px;
+        height: 40px;
+    }
+
+    .back-to-top-button{
+        position: absolute;
+        top:100px;
+        height: 40px;
+
+        .tooltip-inner{
+            width:95px;
+        }
+    }
+}
+
+// the following button is deprecated as per version 1.5.5. it will be removed from future releases 
+.btn-feedback{
+    padding: 4px 10px;
+    background: #dee6ed;
+    color: #666;
+    text-align: center;
+    text-transform: capitalize;
+    &:hover, 
+    &:active,
+    &:focus{
+        color: #666;
+    }
+}
+
