@@ -51,8 +51,13 @@ $( document ).ready(function(){
     });
 
     // Initialize bootstrap tooltip and popover
-    $("[rel='tooltip']").tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
     $("[data-toggle='popover']").popover();
+
+    // Disable tooltip on mobile
+    // if(!('ontouchstart' in window)){
+    //     $('.feedback-button .hyicon-gethelp').tooltip('destroy');
+    // }
 
     // Enabling Popover
     $(".ui-tooling-btn").popover({
@@ -201,6 +206,25 @@ $( document ).ready(function(){
 
     // initialize select
     $("select#customSelect1").select2({ minimumResultsForSearch: Infinity });
+
+
+    // back to top
+    $('.back-to-top-button').hide();
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 300){
+            $('.back-to-top-button').fadeIn(300);
+        }else{
+            $('.back-to-top-button').fadeOut(300);
+        }
+    });
+     
+    $('.back-to-top-button').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 300);
+        return false;
+    });
+ 
+
 
 });
 
