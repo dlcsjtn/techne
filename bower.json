@@ -5,10 +5,13 @@
   "authors": [
     "Hybris Software"
   ],
-  "keywords":[
-    "Hybris", "techne", "SAP", "[y]"
+  "keywords": [
+    "Hybris",
+    "techne",
+    "SAP",
+    "[y]"
   ],
-  "ignore":[
+  "ignore": [
     ".idea/",
     "docs/",
     "bower_components",
@@ -18,9 +21,8 @@
     "config.json",
     "gulpfile.js",
     "package.json"
-
   ],
-  "main":[
+  "main": [
     "dist/js/techne.min.js",
     "dist/css/techne.min.css"
   ],
@@ -29,6 +31,6 @@
   "dependencies": {
     "bootstrap": "~3.3.2",
     "select2": "~3.5.2",
-    "jquery": "~2.1.0"
+    "jquery": "^3.1.1"
   }
 }
