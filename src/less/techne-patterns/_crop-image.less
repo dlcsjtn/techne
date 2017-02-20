@@ -1,0 +1,113 @@
+// Crop Image
+//
+// Some description should be here
+//
+// Markup:
+//<div class="thumbnail-shape">
+//  <div class="thumbnail__img thumbnail-shape--circle" style="background-image: url('/images/cat-avatar.jpg')"></div>
+//  <div class="thumbnail-action-btn-wrapper">
+//    <button class="btn btn-link" data-toggle="modal" data-target="#myModal">Upload</button>
+//    <button class="btn btn-danger">Delete Image</button>
+//  </div>
+//</div>
+//
+// Pattern 18.1
+//
+// Markup:
+// <div id="myModal" class="modal fade" role="dialog">
+//   <div class="modal-dialog">
+//     <div class="modal-content">
+//       <div class="modal-header">
+//         <button type="button" class="close" data-dismiss="modal">&times;</button>
+//         <h1 class="modal-title">Modal Header</h1>
+//       </div>
+//       <div class="modal-body y-crop">
+//          <div class="y-table">
+//            <div class="y-table-cell">
+//              <label>Original</label>
+//                  <img ng-src="{{tmpSrc}}" class="y-crop-img">
+//                  <div class="original-image--wrapper">
+//                  <canvas id="cropCanvas" width="200" height="200"></canvas>
+//            </div>
+//          </div>
+//           <div class="y-table-cell y-table--min-width hidden-xs y-preview-area" ng-class="{'y-thumbnail--circle' : croppingMask==='circle'}">
+//           <label>Preview</label>
+//           <canvas id="previewCanvas" class="y-thumbnail__img preview-image--size"  width="150" height="150"></canvas>
+//          </div>
+//        </div>
+//       </div>
+//       <div class="modal-footer">
+//         <button type="button" class="btn btn-subordinate" data-dismiss="modal" ng-click="closeCropModal()">Cancel</button>
+//         <button class="btn btn-lg btn-primary" ng-click="generateCroppedImage()">Save</button>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Pattern 18.1
+
+
+
+.y-crop {
+  padding-bottom: 0!important;
+  @media (max-width: 768px) {
+    .jcrop-handle {
+      border-radius: 20px;
+      width: 41px;
+      height: 41px;
+      background: #c5cdd6;
+      opacity: 0.5;
+    }
+
+    .jcrop-handle.ord-n,
+    .jcrop-handle.ord-w,
+    .jcrop-handle.ord-s,
+    .jcrop-handle.ord-e {
+      display: none;
+    }
+
+    .jcrop-dragbar {
+      display: none;
+    }
+
+    .jcrop-handle.ord-nw {
+      margin-left: -21px;
+      margin-top: -21px;
+    }
+    .jcrop-handle.ord-sw {
+      margin-left: -21px;
+      margin-bottom: -21px;
+    }
+    .jcrop-handle.ord-ne {
+      margin-right: -21px;
+      margin-top: -21px;
+    }
+    .jcrop-handle.ord-se {
+      margin-right: -21px;
+      margin-bottom: -21px;
+    }
+    .jcrop-vline,
+    .jcrop-hline {
+      background: #c5cdd6;
+    }
+    .jcrop-vline {
+      width: 3px !important;
+    }
+    .jcrop-hline {
+      height: 3px !important;
+    }
+  }
+
+  .jcrop-keymgr {
+    visibility: hidden;
+  }
+  .original-image--wrapper{
+    width:0;
+    height:0;
+    overflow: hidden;
+  }
+  .preview-image--size{
+    width: 150px;
+    height: 150px;
+  }
+}
