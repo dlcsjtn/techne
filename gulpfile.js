@@ -31,9 +31,6 @@ var paths = {
     doc_less: 'src/less/**/*.less',
     doc_markdown: 'docs/markdown/**/*',
     doc_template: 'docs/template/**/*',
-    html: [
-        'src/html/**/*.html'
-    ],
     environment: 'dist'
 };
 
@@ -124,23 +121,37 @@ gulp.task('less', ['setpath'] ,
     }
 );
 
-
-//----ABOVE COMPLETE----
-
-
 // Complile general Less Files
-gulp.task('html',
-    function ()
+gulp.task('less-components', ['setpath'],
+    function()
     {
-        gulp.src(paths.html)
-        .pipe(cachebust({
-            type: 'timestamp'
-        }))
+        gulp.src(['src/less/components/*.less','!src/less/components/_*.less'])
         .pipe(
-            gulp.dest('docs/')
+            less(
+                {
+                    errLogToConsole: true,
+                    plugins: [autoprefix, cleancss]
+                }
+            )
+        )
+        .on('error',
+            function(err)
+            {
+                console.log(err.message);
+            }
+        )
+        .pipe(
+            gulp.dest( paths.environment+'/techne/css/components' )
         );
     }
 );
+
+
+
+
+
+//----ABOVE COMPLETE----
+
 
 
 // Generate Docs
@@ -252,6 +263,5 @@ gulp.task('default', [ 'build' , 'connect', 'watch']);
 // Rerun the task when a file changes
 gulp.task('watch', function() {
     gulp.watch(paths.less_watch, ['less']);
-    gulp.watch(paths.html, ['html']);
     gulp.watch(paths.less_watch, ['styleguide']);
 });

@@ -30,6 +30,13 @@
 
 // Inherit all styles of the .help-block to
 // avoid validation overwrites (.has-error etc)
+
+@import (optional) "../globals/_resource-paths";
+@import "../@{bower-path}/bootstrap/less/variables";
+@import "../@{bower-path}/bootstrap/less/mixins";
+@import (reference) "../@{bower-path}/bootstrap/less/forms";
+@import "../globals/_variables";
+
 .help-block-inline{
    .help-block();
 }
