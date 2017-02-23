@@ -121,30 +121,19 @@ gulp.task('less', ['setpath'] ,
     }
 );
 
-// Complile general Less Files
-gulp.task('less-components', ['setpath'],
-    function()
-    {
-        gulp.src(['src/less/components/*.less','!src/less/components/_*.less'])
-        .pipe(
-            less(
-                {
+// Complile component less files
+gulp.task('less-components', ['setpath'], () => {
+        gulp.src(['src/less/\{components,patterns\}/*.less','!src/less/\{components,patterns\}/_*.less'])
+            .pipe(less({
                     errLogToConsole: true,
                     plugins: [autoprefix, cleancss]
-                }
+                })
             )
-        )
-        .on('error',
-            function(err)
-            {
+            .on('error', (err) => {
                 console.log(err.message);
-            }
-        )
-        .pipe(
-            gulp.dest( paths.environment+'/techne/css/components' )
-        );
-    }
-);
+            })
+            .pipe(gulp.dest( paths.environment+'/techne/css/' ));
+});
 
 
 

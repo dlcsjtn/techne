@@ -3,7 +3,7 @@
 // Messaging within the application is color-coded to emphasize the level of urgency, but the goal is to limit the number of colors overall to reduce cognitive load. In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task. The color-coded system should allow at-a-glance understanding of allowable actions.
 //
 // Component 1
-@import "./overwrites/_alert.less";
+@import "components/alert";
 
 
 // Buttons
@@ -11,10 +11,10 @@
 // Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.  Used in patterns like page headers, modals and wizards. See Patterns & Layouts for examples of usage.
 //
 // Component 2
-@import './overwrites/_buttons.less';
-@import "./components/forms-toggle";
-@import "./components/back-to-top.less";
-@import "./components/button-icon.less";
+@import "components/buttons";
+@import "components/forms-toggle";
+@import "components/back-to-top";
+@import "components/button-icon";
 
 
 // Contextual Menu
@@ -22,7 +22,7 @@
 // The “more” contextual menu is used with Cards or Tables when there is additional functionality available for the data shown in the Card or Table row, and trying to expose that functionality would clutter the interface.
 //
 // Component 3
-@import './overwrites/_dropdowns.less';
+@import "components/dropdowns";
 
 
 // Form Elements
@@ -30,12 +30,12 @@
 // Form Elements include the layout of a field itself, checkboxes, radio buttons and states of a field.  Use these components along with inline help and error state treatements for any form design.
 //
 // Component 4
-@import './overwrites/_forms.less';
-@import "./components/forms-hint-text";
-@import "./components/forms-checkboxes";
-@import "./components/forms-radiobuttons";
-@import "./components/forms-select";
-@import "./components/forms-readonly";
+@import "components/forms";
+@import "components/forms-hint-text";
+@import "components/forms-checkboxes";
+@import "components/forms-radiobuttons";
+@import "components/forms-select";
+@import "components/forms-readonly";
 
 
 // Help and Validation
@@ -43,11 +43,11 @@
 // To aid Builder users we have established different levels of help and help interaction patterns to address specific interaction and feedback needs.
 //
 // Component 5
-@import "./components/forms-criticalerroravoidance.less";
-@import "./components/forms-charactercounter.less";
-@import "./components/forms-validationandhelp.less";
-@import "./components/forms-help.less";
-@import "./components/feedback-menu.less";
+@import "components/forms-criticalerroravoidance";
+@import "components/forms-charactercounter";
+@import "components/forms-validationandhelp";
+@import "components/forms-help";
+@import "components/feedback-menu";
 
 
 // Icons
@@ -69,7 +69,7 @@
 // Use a Listgroup when data is meant to show in a single column
 //
 // Component 7
-@import './overwrites/_listgroup.less';
+@import "components/listgroup";
 
 
 // Loading Spinner
@@ -77,7 +77,7 @@
 // CSS based spinner to indicate to the user that some information is processing or loading.
 //
 // Component 8
-@import "./components/_spinner.less";
+@import "components/spinner";
 
 
 // Page Content Panels
@@ -85,7 +85,7 @@
 // Panels are used to set apart the content or form elements on a page from the background.  Place patterns and interactions within panels on your pages to achieve visual focus and separation for the tasks at-hand. Used on every page.
 //
 // Component 9
-@import './overwrites/_panels.less';
+@import "components/panels";
 
 
 // Pagination
@@ -93,7 +93,7 @@
 // Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set.
 //
 // Component 10
-@import './overwrites/_pagination.less';
+@import "components/pagination";
 
 
 // Status Indicators
@@ -110,8 +110,8 @@
 // <p><i>Note that information, statuses or states should not be communicated by color alone. It is recommended a label always accompany a color.</i></p>
 //
 // Component 11
-@import './overwrites/_labels.less';
-@import './overwrites/_badges.less';
+@import "components/labels";
+@import "components/badges";
 
 
 // Tabs
@@ -119,7 +119,7 @@
 // Use Tabs when you need to organize and group information on page while reducing information density.
 //
 // Component 12
-@import './overwrites/_tabs.less';
+@import "components/tabs";
 
 
 // Thumbnail Zoom
@@ -127,10 +127,10 @@
 // If a thumbnail image or images are used it is recommended you allow someone to get a larger view. Use this component to allow a larger view.
 //
 // Component 13
-@import "./components/_thumbnail-zoom";
+@import "components/thumbnail-zoom";
 
 
 // Tooltip and Popover
 //
 // Component 14
-@import "./components/_tooltip-popover";
+@import "components/tooltip-popover";
