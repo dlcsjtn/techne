@@ -22,7 +22,7 @@
 // Component 2.1.2
 
 @import (optional) "../globals/_resource-paths";
-@import "../@{bower-path}/bootstrap/less/mixins";
+@import "../@{bower-path}/bootstrap/less/mixins/buttons";
 @import "../globals/_variables";
 
 .btn{
@@ -51,15 +51,15 @@
 }
 
 .btn-success {
-  .box-shadow(0 3px 0 darken(@btn-success-bg, 10%));
+  box-shadow: 0 3px 0 darken(@btn-success-bg, 10%);
 }
 
 .btn-info {
-  .box-shadow(0 3px 0 darken(@btn-info-bg, 20%));
+  box-shadow: 0 3px 0 darken(@btn-info-bg, 20%);
 }
 
 .btn-warning {
-  .box-shadow(0 3px 0 darken(@btn-warning-bg, 7%));
+  box-shadow: 0 3px 0 darken(@btn-warning-bg, 7%);
 }
 
 .btn-danger {
@@ -85,7 +85,7 @@
   color: @color-default;
   background-color: @background-default;
   border-color: @border-default;
-  .box-shadow(0 2px 0 fade(@boxshadow-default, 100%));
+  box-shadow: 0 2px 0 fade(@boxshadow-default, 100%);
   &:focus,
   &:active:focus {
     background-color: @background-click;
@@ -98,7 +98,7 @@
     color: @color-hover;
     background-color: @background-hover;
     border-color: @border-hover;
-    .box-shadow(0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%));
+    box-shadow: 0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%);
   }
   &:active,
   &.active,
@@ -127,7 +127,7 @@
       background-image: none;
       background-color: @btn-bg-disabled;
       border-color: lighten(@border-hover, 4%);
-      .box-shadow(0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%));
+      box-shadow: 0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%);
     }
   }
   .badge {
@@ -255,7 +255,7 @@
 // Component 2.5
 .btn-group {
   border-radius: 4px;
-  .box-shadow(1px 2px 1px fade(@default-greyblue-200, 100%));
+  box-shadow: 1px 2px 1px fade(@default-greyblue-200, 100%);
 }
 .btn-segmented{
   background-color: #fff;
