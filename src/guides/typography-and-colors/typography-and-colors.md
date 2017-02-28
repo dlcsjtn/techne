@@ -11,7 +11,8 @@ On this guide we are going to learn about Techné Typography elements. How to us
 
 We are going to look at the colors available on Techné. How these colors are used and which elements can have different colors to reflect different uses.
 
-### Index
+## Index
+
 * Types of text
 * Text visual hierarchy
 * Main and secondary colors
@@ -20,6 +21,12 @@ We are going to look at the colors available on Techné. How these colors are us
 * Background  and frames colors
 
 ## Types of text
+
+Usual User Experiences build using Techné use Typography and text size as a way to represent visual hierarchy. This makes easier to understand, navigate and use the interface.
+
+Let's take a look at the screenshot bellow
+
+![Types of text](./images/types-of-text.png "Logo Title Text 1")
 
 
 
