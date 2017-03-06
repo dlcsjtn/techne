@@ -39,7 +39,15 @@ As you can see we have different styles for different kinds of textual informati
 
 ## Text visual hierarchy
 
-From the screenshot above you can see Text is used to give the page a Visual Hierarchy and at the same time to separate the different areas of the screen. The main text element used to accentuate the visual hierarchy are the Headlines.
+From the screenshot above you can see Text is used to give the page a Visual Hierarchy and at the same time to separate the different areas of the screen. The main text element used to accentuate the visual hierarchy are the Headlines, as shown on the screenshot bellow. In this case used in a two columns layout.
 
+![Text Visual Hierarchy](./images/text-hierarchy.png "Text visual hierarchy")
 
+Headlines, as well as the page title, use the font [Dosis](/Guidelines.html#guidelines-visual-system) to accentuate the difference from the normal text on screen.
+
+## Main and Secondary colors
+
+The [Techné Color Palette](/Guidelines.html#guidelines-design-principles) have 5 Primary colors and 4 Secondary. As shown bellow.
+
+![Techné Color Palette](./images/techne-color-palette.png "Techné Color Palette")
 
