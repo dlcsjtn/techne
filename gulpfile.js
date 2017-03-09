@@ -101,6 +101,7 @@ gulp.task('less', ['setpath'], () => {
         }))
         .on('error', (err) => {
             console.log(err.message);
+            process.exit(1); // will break the build if less fails.
         })
         .pipe(cachebust({
             type: 'timestamp'
